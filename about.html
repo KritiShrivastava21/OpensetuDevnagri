@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>OpenSetu About Section</title>
+  <style>
+    :root {
+      --max-width: 1200px;
+      --gutter: 24px;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Inter", sans-serif;
+      color: #1F2937;
+      background: #fff;
+    }
+    .about-wrapper {
+      background-color: #F7F9FB;
+      position: relative;
+      overflow: hidden;
+    }
+    .white-tilted-layer {
+      position: absolute; top: 60px;
+      width: 100%; height: 1300px;
+      background: white;
+      transform: skewY(-5deg);
+      z-index: 0;
+    }
+    .blue-shapes {
+      position: absolute; top: -45px; right: 0;
+      z-index: 1; transform: skewY(-5deg);
+    }
+    .blue1, .blue2 { position: absolute; transform: skewX(-30deg); }
+    .blue1 {
+      background-color: #80E9FF;
+      width: 35vw; max-width: 420px;
+      height: 25px; top: 50px; right: 10px;
+      z-index: 1;
+    }
+    .blue2 {
+      background-color: #185ADB;
+      width: 10vw; max-width: 120px;
+      height: 25px; top: 70px; right: 200px;
+      z-index: 2;
+    }
+    .section {
+      position: relative;
+      max-width: var(--max-width);
+      padding: 8rem var(--gutter) 4rem;
+      margin: 0 auto;
+      z-index: 2;
+    }
+    .about-heading {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #032E83;
+      margin: 0 0 1.5rem;
+      text-align: left;
+    }
+    .top-container {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      justify-content: center;
+      margin-bottom: 4rem;
+    }
+    .top-text {
+      flex: 1 1 320px;
+      max-width: 500px;
+      text-align: left;
+    }
+    .top-text .highlight {
+      color: #0A55A7;
+      font-weight: 700;
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+    }
+    .top-text h2 {
+      font-size: 2rem;
+      font-weight: 600;
+      line-height: 1.3;
+      margin: 0.5rem 0 1.5rem;
+      color: #032E83;
+    }
+    .top-text p {
+      color: #425466;
+      font-size: 1rem;
+      line-height: 1.5;
+      margin-bottom: 1rem;
+    }
+    .top-image {
+      flex: 0 1 320px;
+      max-width: 320px;
+    }
+    .top-image img {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 1/1;
+      object-fit: cover;
+      border-radius: 12px;
+      display: block;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2rem;
+      background: #fff;
+      padding: 2rem;
+      box-shadow: 0 20px 90px rgba(0,0,0,0.12);
+      border-radius: 15px;
+      justify-items: center;
+    }
+
+    .grid-box {
+      background: #F5F7FA;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s, box-shadow 0.3s;
+      width: 100%;
+    }
+    .grid-box:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+    }
+    .grid-box h3 {
+      font-size: 1.2rem;
+      color: #032E83;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+    }
+    .grid-box p {
+      color: #425466;
+      font-size: 1rem;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    /* Breakpoints */
+    @media (max-width: 768px) {
+      .section { padding: 6rem var(--gutter) 3rem; }
+      .about-heading {
+        font-size: 2rem;
+        text-align: center;
+      }
+      .top-container { flex-direction: column; }
+      .top-text { text-align: center; }
+      .top-text h2 { font-size: 1.5rem; }
+    }
+    @media (max-width: 480px) {
+      .about-heading { font-size: 1.75rem; }
+      .top-text { font-size: 0.9rem; }
+      .top-text h2 { font-size: 1.25rem; }
+    }
+  </style>
+</head>
+<body>
+  <section class="about-wrapper">
+    <div class="white-tilted-layer"></div>
+    <div class="blue-shapes">
+      <div class="blue1"></div>
+      <div class="blue2"></div>
+    </div>
+
+    <div class="section">
+      <div class="top-container">
+        <div class="top-text">
+          <h1 class="about-heading">हमारे बारे में</h1>
+          <p class="highlight">एक पहचान एक समय में</p>
+          <h2>ओपनसेतु भारत के अपने इंटरनेट का पुल है</h2>
+          <p>हम हर भारतीय को उनकी मातृभाषा में वेब एक्सेस करने की सुविधा दे रहे हैं — न अंग्रेज़ी, न नए ऐप, न दरबान।</p>
+          <p>एक मुक्त, विकेन्द्रीकृत और समावेशी इंटरनेट की दृष्टि से उत्पन्न, ओपनसेतु उपयोगकर्ताओं को केवल अपने DNS सेटिंग्स बदलकर हैंडशेक द्वारा संचालित और भारत में रूट किए गए एक बहुभाषी वेब को अनलॉक करने देता है। यह आपके नियमों वाला इंटरनेट है, जहां डोमेन नाम विदेशी लिपियों या केंद्रीकृत नियंत्रण में नहीं बल्कि आपकी अपनी भाषा में होते हैं — आपके स्वामित्व वाले।</p>
+          <p>हम इंटरनेट को एकाधिकार से वापस ले रहे हैं और इसे लोगों को लौटा रहे हैं — एक नाम, एक भाषा, एक पहचान के साथ।</p>
+        </div>
+        <div class="top-image">
+          <img src="img5.png" alt="About Image">
+        </div>
+      </div>
+
+      <div class="grid">
+        <div class="grid-box">
+          <h3>निर्माताओं के लिए</h3>
+          <p>ओपनसेतु नवाचार का एक खेल का मैदान है। डेवलपर्स स्थानीय भाषा में ऐप बनाने से लेकर डिजिटल पहचान को फिर से परिभाषित करने वाले स्टार्टअप्स तक, भारत के पास अब एक विकेन्द्रीकृत नींव है जो निर्माण के लिए तैयार है। देशी डोमेन नामों, बहुभाषी लॉगिन और एक ओपन DNS के साथ, आप ऐसी सेवाएं बना सकते हैं जो 1.4 बिलियन आवाज़ों से उनकी अपनी भाषा में सीधे बात करें।</p>
+        </div>
+        <div class="grid-box">
+          <h3>निवेशकों के लिए</h3>
+          <p>भारत खुला इंटरनेट पर मानवता का सबसे बड़ा हिस्सा है। ओपनसेतु केवल अवसंरचना नहीं है, यह एक इंफ्रा-पावर है। हम भाषा की बाधाओं को दूर करके और व्यक्तियों को डिजिटल स्वामित्व लौटाकर अगले अरब उपयोगकर्ताओं को अनलॉक कर रहे हैं। यह पारिस्थितिकी तंत्र ओएस और ब्राउज़र जैसी इंफ्राटेक से लेकर डिजिटल पहचान, भुगतान, व्यापार और संचार जैसी सेवाओं को नया रूप देगा — यह सब भारत की सबसे मूलभूत परत: अपने खुद के इंटरनेट पर आधारित होगा। इस पर आधारित रेल और संस्थापकों में निवेश करें और आप डिजिटल भारत के भविष्य में निवेश कर रहे होंगे।</p>
+        </div>
+        <div class="grid-box">
+          <h3>सरकारों के लिए</h3>
+          <p>डिजिटल सार्वजनिक वस्तुएं डिजिटल सार्वजनिक अवसंरचना की हकदार हैं। ओपनसेतु पारदर्शिता, समावेश और संप्रभुता के मूल में है। हम इंडिया स्टैक की दृष्टि के अनुरूप हैं और हर नागरिक को उनकी मातृभाषा में डिजिटल सेवाओं तक पहुंचने में सक्षम बनाते हैं। ग्रामीण पहुंच से लेकर राष्ट्रीय स्तर तक, ओपनसेतु सरकारों को पूर्ण स्टैक डिजिटल समावेशन के लिए एक सुरक्षित, संप्रभु मार्ग प्रदान करता है। भारत को वैश्विक इंटरनेट के साथ पकड़ने की आवश्यकता नहीं है — ओपनसेतु के माध्यम से, हम अपनी भाषा में, अपनी शर्तों पर आगे बढ़ रहे हैं।</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
